@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import StringCalculator.Calculator;
 import StringCalculator.StringCalc;
 
 class StringCalcTest {
@@ -45,6 +46,11 @@ class StringCalcTest {
 			assertEquals(e.getMessage(), "Negatives not allowed: -4,-5");
 		}
     }
+	@Test
+    public void testBiggerThanThousand(){
+    	assertEquals(2, StringCalc.add1("1000,2"));
+    }
+
 
 
 }
