@@ -12,11 +12,16 @@ class StringCalcTest {
 	
 	@Test
 	public void testEmptyString() {
-		assertEquals(0, StringCalc.add1(" 1"));
+		assertEquals(0, StringCalc.add1(""));
 	}
 	@Test
 	public void testTwoNumbers(){
-		assertEquals(1, StringCalc.add1("1,2"));
+		assertEquals(3, StringCalc.add1("1,2"));
 	}
+	 @Test
+	public void testNewLine(){
+	   assertEquals(6, StringCalc.add1("1\n2,3"));
+	    }
+
     
 }
