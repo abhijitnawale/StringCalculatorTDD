@@ -4,14 +4,12 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-
-import StringCalculator.Calculator;
 import StringCalculator.StringCalc;
 
 class StringCalcTest {
 
 	@Test
-	public void testEmptyString() {
+	public void emptyString() {
 		assertEquals(0, StringCalc.add1(""));
 	}
 
