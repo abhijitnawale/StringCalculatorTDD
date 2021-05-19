@@ -28,5 +28,23 @@ class StringCalcTest {
 	public void testDiffDelimiter() {
 		assertEquals(3, StringCalc.add1("//;\n1;2"));
 	}
+	
+	@Test
+    public void testNegativeNumbers(){
+    	try {
+    		StringCalc.add1("-1,2");
+		}
+		catch (IllegalArgumentException e){
+			assertEquals(e.getMessage(), "Negatives not allowed: -1");
+		}
+
+		try {
+			StringCalc.add1("2,-4,3,-5");
+		}
+		catch (IllegalArgumentException e){
+			assertEquals(e.getMessage(), "Negatives not allowed: -4,-5");
+		}
+    }
+
 
 }
